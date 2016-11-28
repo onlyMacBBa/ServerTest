@@ -21,8 +21,9 @@ public class ServerGui {
         
         contentPane.add(text, BorderLayout.CENTER);
         contentPane.add(button, BorderLayout.SOUTH);
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setVisible(true);
+        frame.setVisible(true); 
 	}
 }
