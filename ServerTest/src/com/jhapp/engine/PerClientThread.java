@@ -14,6 +14,8 @@ class PerClientThread extends Thread {
 			Collections.synchronizedList(new ArrayList<PrintWriter>());
 	Socket socket;
 	PrintWriter writer;
+	ServerGui gui = new ServerGui();
+	
 	PerClientThread(Socket socket) {
 		this.socket = socket;
 		try {
@@ -23,6 +25,7 @@ class PerClientThread extends Thread {
 			System.out.println(e.getMessage());
 		}
 	}
+	
 	public void run() {
 		String name = null;
 		try {
@@ -48,13 +51,10 @@ class PerClientThread extends Thread {
 			}
 		}
 	}
+	
 	private void sendAll(String str) {
-		
-		ServerGui gui = new ServerGui();
-		
 		for (PrintWriter writer : list) {
 			writer.println(str);
-			gui.text.setText(str);
 			writer.flush();
 		}
 	}
