@@ -12,10 +12,10 @@ public class ServerGui {
 	
 	JFrame frame = new JFrame("ServerTest");
 	Container contentPane = frame.getContentPane();
-    JTextField text = new JTextField();
+    public JTextField text = new JTextField();
     JButton button = new JButton("¿˙¿Â");
 	
-	public ServerGui() {
+	public void printGui() {
 		frame.setPreferredSize(new Dimension(500, 500));
         frame.setLocation(500, 400);
         

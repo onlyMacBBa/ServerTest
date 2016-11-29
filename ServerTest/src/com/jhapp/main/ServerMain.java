@@ -7,7 +7,8 @@ public class ServerMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		new ServerGui(); 
+		ServerGui gui = new ServerGui();
+		gui.printGui();
 	}
 
 }
