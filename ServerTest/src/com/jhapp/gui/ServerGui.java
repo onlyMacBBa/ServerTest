@@ -12,7 +12,7 @@ public class ServerGui {
 	
 	JFrame frame = new JFrame("ServerTest");
 	Container contentPane = frame.getContentPane();
-    public JTextField text = new JTextField();
+    JTextField text = new JTextField();
     JButton button = new JButton("¿˙¿Â");
 	
 	public void printGui() {
